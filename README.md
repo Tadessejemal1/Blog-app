@@ -60,15 +60,9 @@ After you're finished please remove all the comments and instructions!
 # Blog App with Ruby on Rails
 Blog App with Ruby on Rails is a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts..
 
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
-
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -108,9 +102,9 @@ Note.- This project is in construction !
 ### Prerequisites
 
 In order to run this project you need:
-  -Ruby
-  -Rails
-  -Postgresql
+ #### -Ruby
+ #### -Rails
+ #### -Postgresql
 
 <!--
 Example command:
@@ -120,54 +114,25 @@ Example command:
 ```
  -->
 
-### Setup
+### Github
+Enter this url: https://github.com/Tadessejemal1/Blog-app---creating-data-model in your web browser.
+Once opened navigate to the top left level of the project a green code download button will be visible on the righthand side.
+Select the download Zip option from drop-down menu.
+Once the download is complete you will be able to access my project locally.
 
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
+Local (Terminal)
+  - git clone git@github.com:Tadessejemal1/Blog-app---creating-data-model.git
+  
 ### Install
+Install this project with the steps below:
 
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+After cloning type cd Blog-app--creating-data-model to access the project on the terminal.
+Run bundle install to install all the required dependancies.
 
 ### Usage
-
 To run the project, execute the following command:
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
+Run rails s to start a development server.
 --->
 
 ### Deployment
