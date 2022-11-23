@@ -95,11 +95,8 @@ Blog App with Ruby on Rails is a fully functional website that shows the list of
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+> Key Features
+Note.- This project is in construction !
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,13 +114,13 @@ Blog App with Ruby on Rails is a fully functional website that shows the list of
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
+  -Ruby
+  -Rails
+  -Postgresql
 
 <!--
 Example command:
