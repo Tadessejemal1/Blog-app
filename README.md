@@ -57,7 +57,8 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# Blog App with Ruby on Rails
+Blog App with Ruby on Rails is a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts..
 
 > Describe your project in 1 or 2 sentences.
 
