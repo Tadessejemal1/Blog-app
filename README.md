@@ -153,8 +153,6 @@ Example:
 
 ## 👥 Author <a name="author"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Author**
 👤 *Tadesse Jemal*
 
