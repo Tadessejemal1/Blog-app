@@ -198,7 +198,7 @@ Example:
 
 <!-- AUTHOR -->
 
-## 👥 Authors <a name="author"></a>
+## 👥 Author <a name="author"></a>
 
 > Mention all of the collaborators of this project.
 
@@ -208,8 +208,6 @@ Example:
 - GitHub: [@Tadessejemal1](https://github.com/Tadessejemal1)
 - Twitter: [@twitterhandle](https://twitter.com/tadesse)
 - LinkedIn: [@tadesse-jemal](https://linkedin.com/in/tadesse-jemal)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
