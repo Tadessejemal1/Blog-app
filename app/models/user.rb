@@ -3,7 +3,6 @@ class User < ApplicationRecord
   has_many :comments
   has_many :likes
 
-
   # Name must not be blank.
   validates :name, :photo, :bio, presence: true
 

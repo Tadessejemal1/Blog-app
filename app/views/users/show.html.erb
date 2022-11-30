@@ -1,6 +1,6 @@
 <section class="user_section">
   <div class="user_details">
-    <img src=<%= @user.photo %> alt= <%= @user.name%> profile picture />
+    <%= image_tag("profile-picture.jpg", width:'100vw') %>
     <div class="user_info">
       <p class="user_name"><%= @user.name %></p>
       <p class="user_post-counter">Number of posts: <%= @user.posts_counter %></p>
