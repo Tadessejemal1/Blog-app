@@ -18,8 +18,8 @@ fourth_post = Post.create(author: first_user, title: 'Algorithm', text: 'This is
 
 # Create at least 6 posts comments for one of the posts you created
 Comment.create(post: first_post, author: second_user, text: 'Hi Tom!')
-Comment.create(post: second_post, author: second_user, text: 'This is second post')
-Comment.create(post: third_post, author: third_user, text: 'This is third post')
-Comment.create(post: fourth_post, author: fourth_user, text: 'This is fourth post')
-Comment.create(post: fifth_post, author: fifth_user, text: 'there is alternative way')
-Comment.create(post: six_post, author: six_user, text: 'this is the end')
+Comment.create(post: second_post, author: first_user, text: 'This is second post')
+Comment.create(post: first_post, author: second_user, text: 'This is third post')
+Comment.create(post: first_post, author: second_user, text: 'This is fourth post')
+Comment.create(post: second_post, author: first_user, text: 'there is alternative way')
+Comment.create(post: first_post, author: second_user, text: 'this is the end')

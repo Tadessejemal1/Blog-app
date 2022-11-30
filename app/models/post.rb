@@ -13,7 +13,7 @@ class Post < ApplicationRecord
   # LikesCounter must be an integer greater than or equal to zero.
   validates :comments_counter, :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  private
+  # private
 
   def update_posts_counter
     author.increment!(:posts_counter)

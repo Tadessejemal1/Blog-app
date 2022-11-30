@@ -1,2 +1,24 @@
-<h1>Posts</h1>
-<p>Here is a page for post with id <%= params[:id]%> by user <%= params[:user_id]%></p>
+<section class="post-details">
+  <div class="post-info">
+    <div class="header">
+      <p class="post_title">
+        Post <strong><%= @post.title %></strong>
+        by <strong><%= @post.author.name %></strong>
+      </p>
+      <p class="comment-counter">
+        comments: <%= @post.comments_counter %>
+        likes: <%= @post.likes_counter %>
+      </p>
+    </div>
+    <p class="post_text"><%= @post.text %></p>
+  </div>
+  <ul class="comments-list">
+    <%@post.comments.each do |comment|%>
+      <li>
+        <span class="author"><%= comment.author.name %>:</span>
+        <span><%= comment.text %>:</span>
+      </li>
+    <% end %>
+  </ul>
+</li>
+</section>

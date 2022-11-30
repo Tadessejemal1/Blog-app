@@ -1,2 +1,26 @@
-<h1>Users</h1>
-<p>Here is a page for user <%= params[:id] %></p>
+<section class="user_section">
+  <div class="user_details">
+    <img src=<%= @user.photo %> alt= <%= @user.name%> profile picture />
+    <div class="user_info">
+      <p class="user_name"><%= @user.name %></p>
+      <p class="user_post-counter">Number of posts: <%= @user.posts_counter %></p>
+    </div>
+  </div>
+  <div class="bio_container">
+    <h3> Bio </h3>
+    <p> <%= @user.bio%></p>
+  </div>
+  <ul class="user_recent_posts">
+    <% @user.recent_post(@user.id).each_with_index do |post, index|%>
+      <li>
+        <p class="user_post_heading"> Post #<%= index + 1 %> </p>
+        <p class="post_text"><%= post.text %></p>
+        <p class="comment-counter">
+          comments: <%= post.comments_counter %>,
+          likes: <%= post.likes_counter %>
+        </p>
+      </li>
+    <%end%>
+  </ul>
+  <a href="/users/<%= @user.id %>/posts" class="all_posts">See all posts </a>
+</section>

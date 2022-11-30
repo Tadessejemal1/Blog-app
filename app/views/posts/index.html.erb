@@ -1,6 +1,31 @@
-<h1>Welcome to the rails app </h1>
+<div class="user-details">
+  <img src=<%= @user.photo %> alt=<%= @user.name%> profile picture />
+  <div class="user-info">
+    <p class="user_name"><%= @user.name %></p>
+    <p class="user_post-counter">Number of posts: <%= @user.posts_counter %></p>
+  </div>
+</div>
+<ul class="user-posts">
+  <% @posts.each_with_index do |post, index|%>
+    <li>
+      <div class="post-info">
+        <p class="user-post-heading">Post #<%= (index + 1) %> </p>
+        <p class="post_text"><%= post.text %></p>
+        <p class="comment-counter">
+          comments: <%= post.comments_counter %>,
+          likes: <%= post.likes_counter %>
+        </p>
+      </div>
 
-<p> <%= @post.id %> </p>
-<p> <%= @post.author_id %> </p>
-<p> <%= @post.title %> </p>
-<p> <%= @post.text %> </p>
+      <ul class="post-comments-list">
+        <%post.last_five_comments.each do |comment|%>
+          <li>
+            <span class="comment-author"><%= comment.author.name %>:</span>
+            <span><%= comment.text %>:</span>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  <%end%>
+</ul>
+<a href="#" class="see-all-posts"> Pagination </a>
