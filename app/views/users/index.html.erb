@@ -1,2 +1,9 @@
 <h1>Users</h1>
-<p>Here is a page for user <%= params[:id] %></p>
+<% @users.each do |user| %>
+    <p>
+        <% user.id %> <br />
+        <% user.name %> <br />
+        <% user.photo %> <br />
+        <% user.bio %>
+    </p>
+<% end %>
