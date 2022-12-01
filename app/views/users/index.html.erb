@@ -1,2 +1,14 @@
-<h1>Users</h1>
-<p>Here is a page for user <%= params[:id] %></p>
+<h2> ALL USERS </h2>
+<ul class="users-list">
+  <% @users.each do |user|%>
+    <li>
+      <%= image_tag("profile-picture.jpg", width:'100vw') %>
+      <div class="user-info">
+        <p class="user_name">
+          <%= link_to user.name, "/users/#{user.id}" %>
+        </p>
+        <p class="user_post-counter">Number of posts: <%= user.posts_counter %></p>
+      </div>
+    </li>
+  <%end%>
+</ul>

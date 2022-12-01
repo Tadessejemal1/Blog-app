@@ -1,2 +1,31 @@
-<h1>Posts#index</h1>
-<p>Here are list of posts by user <%= params[:user_id]%> </p>
+<div class="user-details">
+  <%= image_tag("profile-picture.jpg", width:'100vw') %>
+  <div class="user-info">
+    <p class="user_name"><%= @user.name %></p>
+    <p class="user_post-counter">Number of posts: <%= @user.posts_counter %></p>
+  </div>
+</div>
+<ul class="user-posts">
+  <% @posts.each_with_index do |post, index|%>
+    <li>
+      <div class="post-info">
+        <p class="user-post-heading">Post #<%= (index + 1) %> </p>
+        <p class="post_text"><%= post.text %></p>
+        <p class="comment-counter">
+          comments: <%= post.comments_counter %>,
+          likes: <%= post.likes_counter %>
+        </p>
+      </div>
+
+      <ul class="post-comments-list">
+        <%post.last_five_comments.each do |comment|%>
+          <li>
+            <span class="comment-author"><%= comment.author.name %>:</span>
+            <span><%= comment.text %>:</span>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  <%end%>
+</ul>
+<a href="#" class="see-all-posts"> Pagination </a>
