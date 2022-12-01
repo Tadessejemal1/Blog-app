@@ -1,26 +1,26 @@
-<section class="user_section">
-  <div class="user_details">
+<section class="user-section">
+  <div class="user-details">
     <%= image_tag("profile-picture.jpg", width:'100vw') %>
-    <div class="user_info">
-      <p class="user_name"><%= @user.name %></p>
-      <p class="user_post-counter">Number of posts: <%= @user.posts_counter %></p>
+    <div class="user-info">
+      <p class="user-name"><%= @user.name %></p>
+      <p class="user-post-counter">Number of posts: <%= @user.posts_counter %></p>
     </div>
   </div>
-  <div class="bio_container">
+  <div class="bio-container">
     <h3> Bio </h3>
     <p> <%= @user.bio%></p>
   </div>
-  <ul class="user_recent_posts">
+  <ul class="user-recent-posts">
     <% @user.recent_post(@user.id).each_with_index do |post, index|%>
       <li>
-        <p class="user_post_heading"> Post #<%= index + 1 %> </p>
-        <p class="post_text"><%= post.text %></p>
-        <p class="comment-counter">
+        <h3 class="user-post_heading"> Post #<%= index + 1 %> </h3>
+        <p class="post-text"><%= post.text %></p>
+        <h3 class="comment-counter">
           comments: <%= post.comments_counter %>,
           likes: <%= post.likes_counter %>
-        </p>
+        </h3>
       </li>
     <%end%>
   </ul>
-  <a href="/users/<%= @user.id %>/posts" class="all_posts">See all posts </a>
+  <a href="/users/<%= @user.id %>/posts" class="see-all-posts">See all posts </a>
 </section>

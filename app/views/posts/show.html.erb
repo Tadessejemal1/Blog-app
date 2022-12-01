@@ -1,14 +1,14 @@
 <section class="post-details">
   <div class="post-info">
     <div class="header">
-      <p class="post_title">
+      <h3 class="post_title">
         Post <strong><%= @post.title %></strong>
         by <strong><%= @post.author.name %></strong>
-      </p>
-      <p class="comment-counter">
+      </h3>
+      <h3 class="comment-counter">
         comments: <%= @post.comments_counter %>
         likes: <%= @post.likes_counter %>
-      </p>
+      </h3>
     </div>
     <p class="post_text"><%= @post.text %></p>
   </div>
