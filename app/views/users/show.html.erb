@@ -13,12 +13,12 @@
   <ul class="user-recent-posts">
     <% @user.recent_post(@user.id).each_with_index do |post, index|%>
       <li>
-        <p class="user-post_heading"> Post #<%= index + 1 %> </p>
+        <h3 class="user-post_heading"> Post #<%= index + 1 %> </h3>
         <p class="post-text"><%= post.text %></p>
-        <p class="comment-counter">
+        <h3 class="comment-counter">
           comments: <%= post.comments_counter %>,
           likes: <%= post.likes_counter %>
-        </p>
+        </h3>
       </li>
     <%end%>
   </ul>
