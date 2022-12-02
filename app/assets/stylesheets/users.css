@@ -134,3 +134,7 @@
 .form-control {
   padding-left: 20px;
 }
+
+.header {
+  border: 1px solid black;
+}
