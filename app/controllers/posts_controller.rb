@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @user = current_user
     @post = Post.new
     @post.author_id = current_user.id
-  end  
+  end
 
   def create
     @post = Post.new(post_params)
@@ -23,14 +23,13 @@ class PostsController < ApplicationController
       redirect_to user_post_url(current_user, @post)
     else
       flash.now[:error] = "Error: Post could not be saved"
-      render:new 
-    end  
-  end  
+      render :new
+    end
+  end
 
-  private 
+  private
 
   def post_params
     params.require(:post).permit(:title, :text, :author_id, :likes_counter, :comments_counter)
-
-  end  
+  end
 end

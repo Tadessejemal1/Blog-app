@@ -3,10 +3,8 @@
 <%= form_with model: @comment, url: user_post_comments_path do |form|  %>
 <div>
   <%= form.label :text, "My Comment" %><br>
-  <%= form.text_area :text, size: "70x5" %>
+  <%= form.text_area :text, size: "150x5", class:"post-title" %>
 </div>
 
-  <%= form.hidden_field :author_id, value: @current_user.id %>
-  <%= form.hidden_field :post_id, value: @post.id %>
   <%= form.submit "Create comment" %>
 <% end %>

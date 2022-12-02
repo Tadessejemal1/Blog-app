@@ -3,12 +3,12 @@
 <%= form_with model: @post, url: user_posts_path, method: :post, local: true, class: "form-control" do |form| %>
   <div>
     <%= form.label :title, "My Post Title" %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, size: "150x5", class:"post-title" %>
   </div>
 
   <div>
     <%= form.label :text, "My Post Text" %><br>
-    <%= form.text_area :text, size: "70x5" %>
+    <%= form.text_area :text, size: "150x5", class:"post-title"%>
   </div>
 
   <%= form.hidden_field :comments_counter, value: 0 %>
