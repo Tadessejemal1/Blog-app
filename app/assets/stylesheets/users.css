@@ -125,3 +125,16 @@
   align-self: flex-end;
   justify-self: flex-end;
 }
+
+.post-title {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.form-control {
+  padding-left: 20px;
+}
+
+.header {
+  border: 1px solid black;
+}

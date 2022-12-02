@@ -1,19 +1,19 @@
 <section class="post-details">
   <div class="post-info">
     <div class="header">
-      <h3 class="post_title">
+      <h3 class="post-title">
         Post <strong><%= @post.title %></strong>
         by <strong><%= @post.author.name %></strong>
       </h3>
-      <h3 class="comment-counter">
+      <p class="comment-counter">
         comments: <%= @post.comments_counter %>
         likes: <%= @post.likes_counter %>
-      </h3>
+      </p>
     </div>
     <p class="post_text"><%= @post.text %></p>
   </div>
   <ul class="comments-list">
-    <%@post.comments.each do |comment|%>
+    <% @post.comments.each do |comment| %>
       <li>
         <span class="author"><%= comment.author.name %>:</span>
         <span><%= comment.text %>:</span>
@@ -21,4 +21,16 @@
     <% end %>
   </ul>
 </li>
+
+<button>
+  <%= link_to 'Add a Comment', new_user_post_comment_path(@user, @post) %>
+</button>
+
+<%= form_with model: @like, url: user_post_likes_path(@user, @post) do |form| %>
+  <div>
+    <%= form.button "Add a like !", type: "submit" %>
+  </div>
+<% end %>
+
+
 </section>

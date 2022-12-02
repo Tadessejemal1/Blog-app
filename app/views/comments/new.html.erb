@@ -1,0 +1,14 @@
+<h1>Add a new Comment</h1>
+
+<% flash.each do |key, message| %>
+    <p><%= message %></p>
+<% end %>
+
+<%= form_with model: @comment, url: user_post_comments_path do |form|  %>
+<div>
+  <%= form.label :text, "Enter your Comment" %><br>
+  <%= form.text_area :text, size: "150x5", class:"post-title" %>
+</div>
+
+  <%= form.submit "Create comment" %>
+<% end %>
