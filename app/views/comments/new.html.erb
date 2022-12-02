@@ -1,0 +1,12 @@
+<h1>Add a new Comment</h1>
+
+<%= form_with model: @comment, url: user_post_comments_path do |form|  %>
+<div>
+  <%= form.label :text, "My Comment" %><br>
+  <%= form.text_area :text, size: "70x5" %>
+</div>
+
+  <%= form.hidden_field :author_id, value: @current_user.id %>
+  <%= form.hidden_field :post_id, value: @post.id %>
+  <%= form.submit "Create comment" %>
+<% end %>

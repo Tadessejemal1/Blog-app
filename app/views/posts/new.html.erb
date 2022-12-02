@@ -1,0 +1,17 @@
+<h1>Add a new Post</h1>
+
+<%= form_with model: @post, url: user_posts_path, method: :post, local: true, class: "form-control" do |form| %>
+  <div>
+    <%= form.label :title, "My Post Title" %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :text, "My Post Text" %><br>
+    <%= form.text_area :text, size: "70x5" %>
+  </div>
+
+  <%= form.hidden_field :comments_counter, value: 0 %>
+  <%= form.hidden_field :likes_counter, value: 0 %>
+  <%= form.submit "Create Post" %>
+<% end %>
