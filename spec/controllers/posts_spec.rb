@@ -1,35 +1,43 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :request do
-  describe 'GET "/users/1/posts"' do
-    before(:example) { get '/users/1/posts' }
+RSpec.describe "Posts", type: :request do
+  before(:each) do
+    @user = User.create(name: 'Mateo Lane', photo: 'https://unsplash.com/photos/mateopic',
+                        bio: 'Comedian, Italian, stylish, and part time youtuber', posts_counter: 5)
+    @post = Post.create(author: @user, title: 'My first post', text: 'This is my first post', comments_counter: 1,
+                        likes_counter: 1)
+  end
 
-    it 'is a success' do
+  describe "request list of all posts" do
+    before(:each) { get user_posts_path(@user) }
+
+    it "Gives the correct response status" do
       expect(response).to have_http_status(:ok)
     end
 
-    it "renders 'index' template" do
+    it "Renders the correct template" do
       expect(response).to render_template('index')
     end
 
-    it 'page contains text' do
-      expect(response.body).to include('Here are list of posts by user 1')
-    end
+    # it "Checks for full list of posts info into the body" do
+    #   expect(response.body).to include("<h1>Full list of posts for a given user...</h1>")
+    # end
   end
 
-  describe 'GET "/users/1/posts/1"' do
-    before(:example) { get '/users/1/posts/2' }
+  describe "Request only one post for a given user and post id" do
+    before(:each) { get user_post_path(@user, @post) }
 
-    it 'is a success' do
+    it "Gives the correct response status" do
       expect(response).to have_http_status(:ok)
     end
 
-    it "renders 'show' template" do
+    it "Renders the correct template succesfully" do
       expect(response).to render_template('show')
     end
 
-    it 'page contains text' do
-      expect(response.body).to include('Here is a page for post with id 2 by user 1')
-    end
+    # it "Checks for single post info into the body" do
+    #   expect(response.body).to include("<h2>Show specific post for a given user and post id</h2>")
+    # end
   end
 end
+
