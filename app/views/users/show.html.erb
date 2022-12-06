@@ -13,7 +13,8 @@
   <ul class="user-recent-posts">
     <% @user.recent_post(@user.id).each_with_index do |post, index|%>
       <li>
-        <h3 class="user-post_heading"> Post #<%= index + 1 %> </h3>
+        <h3 class="user-post_heading"> <%= link_to "Post ##{index+1}" , user_post_path(@user, post) %></h3>
+        <%= link_to post.title, user_post_path(@user, post) %>
         <p class="post-text"><%= post.text %></p>
         <p class="comment-counter">
           comments: <%= post.comments_counter %>,

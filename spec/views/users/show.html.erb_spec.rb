@@ -101,7 +101,7 @@ RSpec.describe 'Show Index', type: :feature do
     it 'click a users post, it redirects to the posts show page' do
       visit user_path(@user)
       click_link 'Post #1'
-      expect(page).to have_current_path(user_post_path(@user, @post3))
+      expect(page).to have_current_path(user_post_path(@user, @post4))
     end
   end
 end
