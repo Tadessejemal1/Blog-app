@@ -32,8 +32,8 @@ RSpec.describe 'User Index', type: :feature do
 
     it 'displays the right Number of posts' do
       visit users_path
-      expect(page).to have_content('Number of Posts: 1')
-      expect(page).to have_content('Number of Posts: 2')
+      expect(page).to have_content('Number of posts: 1')
+      expect(page).to have_content('Number of posts: 2')
     end
 
     it 'displays a info of a selected user when is redirected to show path' do

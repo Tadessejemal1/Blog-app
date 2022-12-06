@@ -1,5 +1,5 @@
 <div class="user-details">
-    <%= image_tag("profile-picture.jpg", width:'100vw') %>
+  <img class='profile-index-photo' src='<%= @user.photo %>' alt="<%= @user.name %>'s profile picture" />
     <div class="user-info">
       <p class="user-name"><%= @user.name %></p>
       <p class="user-post-counter">Number of posts: <%= @user.posts_counter %></p>
