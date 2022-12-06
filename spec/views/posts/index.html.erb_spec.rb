@@ -64,24 +64,24 @@ RSpec.describe 'Post Index', type: :feature do
       visit user_posts_path(@user)
 
       # Post titles
-      expect(page).to have_content('First post')
-      expect(page).to have_content('Second post')
+      expect(page).to have_content('Post #1')
+      expect(page).to have_content('Post #2')
 
       expect(page).to have_content('This is my first post')
       expect(page).to have_content('This is my second post')
-      expect(page).to have_selector(:link_or_button, 'Add a comment')
-      expect(page).to have_selector(:link_or_button, 'Add a like!')
+
+      # Pagination
+      expect(page).to have_selector(:link_or_button, 'Pagination')
     end
 
     it 'displays number of likes and comments' do
       visit user_posts_path(@user)
 
       # First user post
-      expect(page).to have_content('likes_counter: 2')
-      expect(page).to have_content('comments_counter: 6')
+      expect(page).to have_content('comments: 6, likes: 0')
 
       # Second user post
-      expect(page).to have_content('likes_counter: 1')
+      expect(page).to have_content('comments: 1, likes: 0')
     end
 
     it 'displays the last 5 comments per post' do

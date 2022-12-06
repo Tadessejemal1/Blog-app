@@ -105,4 +105,3 @@ RSpec.describe 'Show Index', type: :feature do
     end
   end
 end
-

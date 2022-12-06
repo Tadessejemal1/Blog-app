@@ -33,8 +33,7 @@ RSpec.describe 'Post Show', type: :feature do
   describe 'Displays the entire body comments counters, and title' do
     it 'displays the counters' do
       visit user_post_path(@user, @post)
-      expect(page).to have_content('comments_counter:3')
-      expect(page).to have_content('likes_counter:1')
+      expect(page).to have_content('comments: 3 likes: 0')
     end
 
     it 'displays post title' do
@@ -64,6 +63,11 @@ RSpec.describe 'Post Show', type: :feature do
       expect(page).to have_content('Tadessee Jemal: I am starving no matter when you read this')
       expect(page).to have_content('Angel Uray: You should eat a piece of cake buddy')
     end
+
+    it 'displays buttons for Add like and Add comment' do
+      visit user_post_path(@user, @post)
+      expect(page).to have_selector(:link_or_button, 'Add a Comment')
+      expect(page).to have_selector(:link_or_button, 'Add a like !')
+    end
   end
 end
-
