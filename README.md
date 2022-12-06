@@ -159,6 +159,12 @@ Example:
 - GitHub: [@Tadessejemal1](https://github.com/Tadessejemal1)
 - Twitter: [@twitterhandle](https://twitter.com/tadesse)
 - LinkedIn: [@tadesse-jemal](https://linkedin.com/in/tadesse-jemal)
+
+👤 **Angel Uray**
+
+- GitHub: [@angeluray](https://github.com/angeluray)
+- Twitter: [@atangeluray](https://twitter.com/atangeluray)
+- LinkedIn: [Angel Uray](www.linkedin.com/in/angeluray-jobs)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
