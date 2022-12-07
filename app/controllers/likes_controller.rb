@@ -3,10 +3,11 @@ class LikesController < ApplicationController
     @post = Post.find_by!(id: params[:post_id])
     current_user = User.find_by!(id: params[:user_id])
     like = Like.create(author: current_user, post: @post)
-
-    redirect_to user_post_likes_url
-    return unless like.save
-
-    like.update_likes_counter
+    if like.save
+      redirect_to user_post_likes_url
+      like.update_likes_counter
+    else
+      redirect_to new_user_post_comment_url
+    end
   end
 end
