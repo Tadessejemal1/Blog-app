@@ -1,0 +1,51 @@
+<div class='log_forms'>
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field inputs_data">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Username" %>
+  </div>
+
+  <div class="field inputs_data">
+    <% if @minimum_password_length %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password (#{@minimum_password_length} characters minimum)" %>
+    <% else %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    <% end %>
+  </div>
+
+  <div class="field inputs_data">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation" %>
+  </div>
+
+  <div class="field inputs_data">
+    <%= f.text_field :name, placeholder: "Name" %>
+  </div>
+
+  <div class="field inputs_data">
+    <%= f.text_field :image, placeholder: "Your image url" %>
+  </div>
+
+  <div class="field inputs_data">
+    <%= f.text_area :bio, size: "60x5", placeholder: "Your biography" %>
+  </div>
+
+   <div class="field inputs_data">
+    <%= f.label :role, "Select a role" %>
+    <%= f.select :role, ["admin", "default"] %>
+  </div>
+
+  <%= f.hidden_field :posts_counter, value: 0 %>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<div class="form_devise">
+<%= render "devise/shared/links" %>
+</div>
+
+</div>
