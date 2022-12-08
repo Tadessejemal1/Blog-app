@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   # PostsCounter must be an integer greater than or equal to zero.
-  # validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def recent_post(id)
     Post.order(created_at: :desc).where(author_id: id).first(3)
