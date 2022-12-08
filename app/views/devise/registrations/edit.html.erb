@@ -28,7 +28,7 @@
   <% end %>
 
   <div class="field">
-    <i>(leave blank if you don't want to change it)</i><br />
+    <i>leave blank if you dont want to change it</i><br />
     <%= f.password_field :password, placeholder: "Password", autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
@@ -60,5 +60,5 @@
 </div>
 
 <%= link_to "Go back to the previous page", :back %> <br />
-<%= link_to "logout", user_session, method: :delete %>
+<%= link_to "logout", destroy_user_session_path, method: :delete %>
 </div>
