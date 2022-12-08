@@ -42,6 +42,8 @@ Style/StringLiterals:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Style/RedundantConstantBase:
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
