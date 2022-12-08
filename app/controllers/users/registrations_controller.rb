@@ -6,11 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def new
   #   super
   # end
-  
-  def create
-    super
-  end
-  
+
   # POST /resource
 
   # GET /resource/edit
