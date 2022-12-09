@@ -6,7 +6,7 @@
         by <strong><%= @post.author.name %></strong>
       </h3>
       <p class="comment-counter">
-        comments: <%= @post.comments_counter %>
+        comments: <%= @post.comments.count %>
         likes: <%= @post.likes_counter %>
       </p>
     </div>

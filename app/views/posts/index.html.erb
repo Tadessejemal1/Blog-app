@@ -2,7 +2,7 @@
   <img class='profile-index-photo' src='<%= @user.photo %>' alt="<%= @user.name %>'s profile picture" />
     <div class="user-info">
       <p class="user-name"><%= @user.name %></p>
-      <p class="user-post-counter">Number of posts: <%= @user.posts_counter %></p>
+      <p class="user-post-counter">Number of posts: <%= @user.posts.count %></p>
     </div>
 </div>
 <ul class="user-posts">
@@ -13,7 +13,7 @@
         <%= button_to "Delete", user_post_path(@user, post), method: :delete %>
         <p class="post-text"><%= post.text %></p>
         <p class="comment-counter">
-          comments: <%= post.comments_counter %>,
+          comments: <%= post.comments.count %>,
           likes: <%= post.likes_counter %>
         </p>
       </div>

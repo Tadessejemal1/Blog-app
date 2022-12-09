@@ -42,7 +42,7 @@ Style/StringLiterals:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
-Style/RedundantConstantBase:
+Style/RedundantAssignment:
   Enabled: false
 
 Layout/HashAlignment:

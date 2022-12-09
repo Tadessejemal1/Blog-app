@@ -22,5 +22,4 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to user_post_path(@user.id, @comment.post_id), status: 303
   end
-
 end
