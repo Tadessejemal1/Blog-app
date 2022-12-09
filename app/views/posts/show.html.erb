@@ -17,17 +17,20 @@
       <li>
         <span class="author"><%= comment.author.name %>:</span>
         <span><%= comment.text %>:</span>
+        <% if can? :manage, comment %>
+          <%= button_to "Delete", user_post_comment_path(@post.author, @post, comment), method: :delete %>
+        <% end %>
       </li>
     <% end %>
   </ul>
 </li>
 
-<button>
+<button class="add_comment_button">
   <%= link_to 'Add a Comment', new_user_post_comment_path(@user, @post) %>
 </button>
 
 <%= form_with model: @like, url: user_post_likes_path(@user, @post) do |form| %>
-  <div>
+  <div class="add_like_button">
     <%= form.button "Add a like !", type: "submit" %>
   </div>
 <% end %>
