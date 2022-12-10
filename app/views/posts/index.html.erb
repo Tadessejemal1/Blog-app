@@ -2,7 +2,7 @@
   <img class='profile-index-photo' src='<%= @user.photo %>' alt="<%= @user.name %>'s profile picture" />
     <div class="user-info">
       <p class="user-name"><%= @user.name %></p>
-      <p class="user-post-counter">Number of posts: <%= @user.posts_counter %></p>
+      <p class="user-post-counter">Number of posts: <%= @user.posts.count %></p>
     </div>
 </div>
 <ul class="user-posts">
@@ -10,9 +10,10 @@
     <li>
       <div class="post-info">
         <h3 class="user-post_heading"> <%= link_to "Post ##{index+1}" , user_post_path(@user, post) %></h3>
+        <%= button_to "Delete", user_post_path(@user, post), method: :delete %>
         <p class="post-text"><%= post.text %></p>
         <p class="comment-counter">
-          comments: <%= post.comments_counter %>,
+          comments: <%= post.comments.count %>,
           likes: <%= post.likes_counter %>
         </p>
       </div>
@@ -22,6 +23,9 @@
           <li>
             <span class="comment-author"><%= comment.author.name %>:</span>
             <span><%= comment.text %>:</span>
+            <% if can? :manage, comment %>
+              <%= button_to "Delete", user_post_comment_path(comment.author, post, comment), method: :delete %>
+            <% end %>
           </li>
         <% end %>
       </ul>

@@ -1,4 +1,13 @@
 class CommentsController < ApplicationController
+  def index
+    @user = current_user
+    @comments = @user.comments
+
+    respond_to do |format|
+      format.json { render json: @comments }
+    end
+  end
+
   def new
     @user = current_user
     @comment = Comment.new
@@ -14,5 +23,12 @@ class CommentsController < ApplicationController
     else
       redirect_to new_user_post_comment_url
     end
+  end
+
+  def destroy
+    @user = User.find(params[:user_id])
+    @comment = @user.comments.find(params[:id])
+    @comment.destroy
+    redirect_to user_post_path(@user.id, @comment.post_id), status: 303
   end
 end

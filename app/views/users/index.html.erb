@@ -7,7 +7,7 @@
         <p class="user_name">
           <%= link_to user.name, "/users/#{user.id}" %>
         </p>
-        <p class="user_post-counter">Number of posts: <%= user.posts_counter %></p>
+        <p class="user_post-counter">Number of posts: <%= user.posts.count %></p>
       </div>
     </li>
   <%end%>
