@@ -45,7 +45,7 @@ Style/FrozenStringLiteralComment:
 Style/RedundantAssignment:
   Enabled: false
 Style/RedundantConstantBase:
-  Enabled:false
+  Enabled: false
 Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
